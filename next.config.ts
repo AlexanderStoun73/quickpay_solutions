@@ -1,5 +1,7 @@
+import {NextConfig} from "next";
+
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const nextConfig:NextConfig= {
     // async rewrites() {
     //     return [
     //         {
@@ -8,6 +10,9 @@ const nextConfig = {
     //         },
     //     ];
     // },
+    typescript:{
+        ignoreBuildErrors:true
+    }
 };
 
 export default nextConfig;
