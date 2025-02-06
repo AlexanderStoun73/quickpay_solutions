@@ -12,7 +12,7 @@ export default function Footer() {
 				<div className={styles.footer__row}>
 					<div className={styles.footer__description}>
 						<div className={styles.footer__primary}>
-							<h5 className={styles.footer__title}>Quickpay Solutions</h5>
+							<h5 className={styles.footer__title}>Quick Solutions</h5>
 							<ul className={styles.footer__text}>
 								<li>Looking for the best deal? Look no further!</li>
 								<li>
@@ -74,7 +74,7 @@ export default function Footer() {
 						<p>
 							©{' '}
 							<Link className={styles.footer__inner_link} href='/'>
-								Quickpay Solutions
+								Quick Solutions
 							</Link>
 							. All Rights Reserved.
 						</p>

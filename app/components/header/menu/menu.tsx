@@ -13,7 +13,7 @@ const Menu = ({ active, setActive }: IActivities) => {
 			<div className={scss.menu__content}>
 				<div className={`${scss.menu_block} ${scss.close_btn}`}>
 					<Link href={'/'}>
-						<h1 className={scss.title}>Quickpay Solutions</h1>
+						<h1 className={scss.title}>Quick Solutions</h1>
 					</Link>
 					<CloseIcon onClick={() => setActive(false)} />
 				</div>

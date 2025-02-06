@@ -7,11 +7,18 @@ import styles from '@/styles/page.module.scss'
 import dynamic from 'next/dynamic'
 import { Suspense } from 'react'
 import Loader from './loading'
+import {Metadata} from "next";
 
 const rubik = Rubik({
 	subsets: ['latin'],
 	weight: ['300', '400', '500', '600', '700', '800', '900'],
 })
+
+export const metadata: Metadata = {
+	title: 'Quick Solutions',
+	icons: '/Q.jpg',
+	description: '...'
+}
 
 export default function RootLayout({
 	children,

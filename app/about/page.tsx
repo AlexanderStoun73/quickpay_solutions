@@ -19,15 +19,15 @@ export default function About() {
 					</article>
 					<div className={styles.about__paragraph}>
 						<p>
-							Quickpay Solutions is a young and dynamic company that offers
+							Quick Solutions is a young and dynamic company that offers
 							innovative and agile services in the field of information
 							technology. The company specializes in providing customized
 							solutions to its clients by leveraging cutting-edge technologies
-							and a team of highly skilled professionals. Quickpay Solutions
+							and a team of highly skilled professionals. Quick Solutions
 							benefits its clients in many ways. First and foremost, the
 							company&apos;s agile approach ensures that its clients&apos; IT
 							needs are met quickly and efficiently, allowing them to stay ahead
-							of the competition. Additionally, Quickpay Solutions innovative
+							of the competition. Additionally, Quick Solutions innovative
 							solutions are designed to enhance the productivity, efficiency,
 							and effectiveness of its clients&apos; businesses, resulting in
 							increased profitability and growth. Finally, the company&apos;s

@@ -20,7 +20,7 @@ export default function NavBar() {
 		<div className={style.navbar}>
 			<div className={style.navbar__space}>
 				<Link href={'/'}>
-					<h3 className={style.navbar__title}>Quickpay Solutions</h3>
+					<h3 className={style.navbar__title}>Quick Solutions</h3>
 				</Link>
 				<nav>
 					<ul className={style.navbar__navList}>
