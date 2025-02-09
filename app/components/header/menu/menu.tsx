@@ -41,7 +41,7 @@ const Menu = ({ active, setActive }: IActivities) => {
 				</ul>
 				<ul className={scss.row}>
 					<li>
-						<Link className={scss.link} href='tel:+996775580611'>
+						<Link className={scss.link} href='tel:+1 609 455 3245'>
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
 								width='24'
@@ -57,7 +57,7 @@ const Menu = ({ active, setActive }: IActivities) => {
 									strokeLinejoin='round'
 								></path>
 							</svg>
-							+996 (775) 580 611
+							+1 609 455 3245
 						</Link>
 					</li>
 				</ul>

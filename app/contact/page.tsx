@@ -22,6 +22,7 @@ export default function Contact() {
 						</span>
                         <div className={styles.contact__block_text}>
                             <h5>Call to ask any question</h5>
+                            <h4><a href="tel:+1 609 455 3245">+1 609 455 3245</a></h4>
                         </div>
                     </article>
                     <article className={styles.contact__block}>
