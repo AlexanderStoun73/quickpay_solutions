@@ -1,6 +1,30 @@
 .service {
 	padding: 3.5rem 0;
 
+
+	&__strip_title {
+			overflow: hidden;
+			text-align: center;
+		&:before,
+		&:after {
+			background-color: #333;
+			content: "";
+			display: inline-block;
+			height: 2px;
+			position: relative;
+			vertical-align: middle;
+			width: 10%;
+		}
+		&:before {
+			right: 0.5em;
+			margin-left: -50%;
+		}
+		&:after {
+			left: 0.5em;
+			margin-right: -50%;
+		}
+	}
+
 	&__card {
 		width: 100%;
 		padding: 0 1rem;
@@ -82,7 +106,82 @@
 		-webkit-animation: section-title-run 5s infinite linear;
 		animation: section-title-run 5s infinite linear;
 	}
+
+	&__background_strip {
+		width: 100vw;
+		height: auto;
+		background-color: #f8fcff;
+		padding: 3rem 1.5rem;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+		display: flex;
+		justify-content: center;
+	}
+
+	&__why_choose {
+		max-width: 800px;
+		text-align: center;
+		color: #333;
+
+		h2 {
+			font-size: 2rem;
+			color: #052c90;
+			margin-bottom: 1rem;
+		}
+
+		h3 {
+			font-size: 1.5rem;
+			margin-top: 1.5rem;
+			color: #444;
+		}
+
+		p {
+			font-size: 1rem;
+			color: #666;
+			line-height: 1.6;
+			margin-top: 0.5rem;
+		}
+	}
 }
+
+.service__why_choose {
+	max-width: 800px;
+	text-align: center;
+	color: #333;
+	margin: 0 auto;
+
+	h2 {
+		font-size: 2rem;
+		color: #052c90;
+		margin-bottom: 1rem;
+	}
+
+	p {
+		font-size: 1rem;
+		color: #666;
+		line-height: 1.6;
+		margin-bottom: 2rem;
+	}
+}
+
+.service__why_choose_columns {
+	display: flex;
+	justify-content: space-between;
+	width: 150%;
+	gap: 4rem;
+}
+
+.service__why_choose_column {
+	flex: 1; /* Даем равное пространство для каждой колонки */
+	width: 50%;
+}
+
+.service__why_choose_item {
+	text-align: justify;
+	margin-bottom: 1.5rem; /* Добавляем расстояние между блоками */
+}
+
 
 @keyframes section-title-run {
 	0% {

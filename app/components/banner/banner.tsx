@@ -46,7 +46,7 @@ export default function Banner() {
 					/>
 				</SwiperSlide>
 				<div className={style.banner__text_wrapper}>
-					<h5 className={style.banner__title}>Creative & Innovative</h5>
+					{/*<h5 className={style.banner__title}>Creative & Innovative</h5>*/}
 					<h1 className={style.banner__main_title}>
 						Creative & Innovative Digital Solution
 					</h1>
