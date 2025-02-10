@@ -78,7 +78,7 @@ export default function Service() {
                         {[
                             { title: "Client-Centric Approach", description: "We prioritize our clients' needs and objectives, and collaborate closely with them to develop customized solutions that align with their business goals and drive measurable results." },
                             { title: "Quality and Reliability", description: "We are dedicated to delivering high-quality and reliable IT services, maintaining the highest standards of excellence, and ensuring customer satisfaction." },
-                            { title: "Proven Track Record", description: "With a strong history of successful IT projects and happy clients, Tanisha Systems is recognized as a trusted IT service provider. Our client success stories and case studies showcase our expertise in delivering high-quality, innovative IT solutions that foster business growth and success." }
+                            { title: "Proven Track Record", description: "With a strong history of successful IT projects and happy clients, Quick Solutions is recognized as a trusted IT service provider. Our client success stories and case studies showcase our expertise in delivering high-quality, innovative IT solutions that foster business growth and success." }
                         ].map((item, index) => (
                             <div key={index} className={styles.service__why_choose_item}>
                                 <h3>{item.title}</h3>
