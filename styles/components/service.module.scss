@@ -1,30 +1,6 @@
 .service {
 	padding: 3.5rem 0;
 
-
-	&__strip_title {
-			overflow: hidden;
-			text-align: center;
-		&:before,
-		&:after {
-			background-color: #333;
-			content: "";
-			display: inline-block;
-			height: 2px;
-			position: relative;
-			vertical-align: middle;
-			width: 10%;
-		}
-		&:before {
-			right: 0.5em;
-			margin-left: -50%;
-		}
-		&:after {
-			left: 0.5em;
-			margin-right: -50%;
-		}
-	}
-
 	&__card {
 		width: 100%;
 		padding: 0 1rem;
@@ -34,6 +10,15 @@
 	&__services_cards {
 		display: flex;
 		flex-wrap: wrap;
+	}
+
+	&__card_image {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__grid_area {
+		margin: 0.5rem 1rem;
 	}
 
 	&__card_inner {
@@ -119,69 +104,44 @@
 		justify-content: center;
 	}
 
-	&__why_choose {
-		max-width: 800px;
-		text-align: center;
-		color: #333;
-
-		h2 {
-			font-size: 2rem;
-			color: #052c90;
-			margin-bottom: 1rem;
-		}
-
-		h3 {
-			font-size: 1.5rem;
-			margin-top: 1.5rem;
-			color: #444;
-		}
-
-		p {
-			font-size: 1rem;
-			color: #666;
-			line-height: 1.6;
-			margin-top: 0.5rem;
-		}
-	}
-}
-
-.service__why_choose {
-	max-width: 800px;
-	text-align: center;
-	color: #333;
-	margin: 0 auto;
-
-	h2 {
-		font-size: 2rem;
-		color: #052c90;
-		margin-bottom: 1rem;
+	&__image_card {
+		display: grid;
 	}
 
-	p {
-		font-size: 1rem;
-		color: #666;
-		line-height: 1.6;
-		margin-bottom: 2rem;
+	&__grid_area:nth-child(1) {
+		grid-area: one;
+	}
+	&__grid_area:nth-child(2) {
+		grid-area: two;
+	}
+	&__grid_area:nth-child(3) {
+		grid-area: three;
+	}
+	&__grid_area:nth-child(4) {
+		grid-area: four;
+	}
+	&__grid_area:nth-child(5) {
+		grid-area: five;
+		img {
+			height: 100%;
+		}
+	}
+	&__grid_area:nth-child(6) {
+		grid-area: six;
+		img {
+			height: 100%;
+		}
+	}
+	&__grid_area:nth-child(7) {
+		grid-area: seven;
+	}
+	&__grid_area:nth-child(8) {
+		grid-area: eight;
+	}
+	&__grid_area:nth-child(9) {
+		grid-area: nine;
 	}
 }
-
-.service__why_choose_columns {
-	display: flex;
-	justify-content: space-between;
-	width: 150%;
-	gap: 4rem;
-}
-
-.service__why_choose_column {
-	flex: 1; /* Даем равное пространство для каждой колонки */
-	width: 50%;
-}
-
-.service__why_choose_item {
-	text-align: justify;
-	margin-bottom: 1.5rem; /* Добавляем расстояние между блоками */
-}
-
 
 @keyframes section-title-run {
 	0% {
@@ -210,6 +170,24 @@
 			&__card_inner {
 				padding: 1.875rem;
 			}
+		}
+
+		&__card_image {
+			display: grid;
+			grid-template-areas:
+				'one two three'
+				'one five three'
+				'one five seven'
+				'four five seven'
+				'four six seven'
+				'four eight seven'
+				'four eight nine';
+			height: 100%;
+			padding: 0 0.75rem;
+		}
+
+		&__grid_area {
+			margin: 0.75rem;
 		}
 	}
 }

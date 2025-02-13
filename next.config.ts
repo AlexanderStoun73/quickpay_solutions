@@ -1,21 +1,16 @@
-import {NextConfig} from "next";
+import { NextConfig } from 'next'
 
 /** @type {import('next').NextConfig} */
-const nextConfig:NextConfig= {
-    // async rewrites() {
-    //     return [
-    //         {
-    //             source: '/send-email',
-    //             destination: 'http://localhost:8080/send-email',
-    //         },
-    //     ];
-    // },
-    typescript:{
-        ignoreBuildErrors:true
-    },
-    eslint: {
-        ignoreDuringBuilds:true
-    }
-};
+const nextConfig: NextConfig = {
+	typescript: {
+		ignoreBuildErrors: true,
+	},
+	eslint: {
+		ignoreDuringBuilds: true,
+	},
+	devIndicators: {
+		appIsrStatus: false,
+	},
+}
 
-export default nextConfig;
+export default nextConfig
