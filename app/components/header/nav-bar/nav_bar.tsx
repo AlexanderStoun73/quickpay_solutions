@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, {useEffect, useState} from 'react'
 import style from '../header.module.scss'
 import MenuIcon from '@mui/icons-material/Menu'
 import Link from 'next/link'
 import Menu from '../menu/menu'
 import { usePathname } from 'next/navigation'
+import Image from "next/image"
 
 const navigation = [
 	{ id: 0, name: 'Home', href: '/' },
@@ -15,12 +16,29 @@ const navigation = [
 export default function NavBar() {
 	const [menuActive, setMenuActive] = useState(false)
 	const pathname = usePathname()
+	const [animate, setAnimate] = useState(false)
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setAnimate(true)
+			setTimeout(() => setAnimate(false), 1000)
+		}, 3000)
+
+		return () => clearInterval(interval)
+	}, [])
 
 	return (
 		<div className={style.navbar}>
 			<div className={style.navbar__space}>
 				<Link href={'/'}>
-					<h3 className={style.navbar__title}>Quick Solutions</h3>
+					<Image
+						src="/QuickSolutions transperent logo 1.png"
+						alt="Quick Solutions Logo"
+						className={`${style.navbar__logo} ${animate ? style.flip : ''}`}
+						width={300}
+						height={100}
+						priority
+					/>
 				</Link>
 				<nav>
 					<ul className={style.navbar__navList}>

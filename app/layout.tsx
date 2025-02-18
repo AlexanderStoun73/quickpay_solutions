@@ -16,25 +16,25 @@ const rubik = Rubik({
 
 export const metadata: Metadata = {
 	title: 'Quick Solutions',
-	icons: '/Q.jpg',
+	icons: '/QuickSolutions Logo.png',
 	description: '...'
 }
 
 export default function RootLayout({
-	children,
-}: Readonly<{
+									   children,
+								   }: Readonly<{
 	children: React.ReactNode
 }>) {
 	return (
 		<html lang='en'>
-			<body className={rubik.className}>
-				<Suspense fallback={<Loader />}>
-					<Header />
-					<Banner />
-					<main className={styles.container}>{children}</main>
-					<Footer />
-				</Suspense>
-			</body>
+		<body className={rubik.className}>
+		<Suspense fallback={<Loader />}>
+			<Header />
+			<Banner />
+			<main className={styles.container}>{children}</main>
+			<Footer />
+		</Suspense>
+		</body>
 		</html>
 	)
 }
