@@ -3,7 +3,6 @@ const Footer = dynamic(() => import('./components/footer/footer'))
 const Header = dynamic(() => import('./components/header/header'))
 const Banner = dynamic(() => import('./components/banner/banner'))
 import '@/styles/globals.css'
-import styles from '@/styles/page.module.scss'
 import dynamic from 'next/dynamic'
 import { Suspense } from 'react'
 import Loader from './loading'
@@ -31,7 +30,7 @@ export default function RootLayout({
 		<Suspense fallback={<Loader />}>
 			<Header />
 			<Banner />
-			<main className={styles.container}>{children}</main>
+			<main>{children}</main>
 			<Footer />
 		</Suspense>
 		</body>

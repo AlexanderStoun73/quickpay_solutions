@@ -11,6 +11,7 @@
   "dependencies": {
     "@mui/icons-material": "^6.1.9",
     "axios": "^1.7.9",
+    "framer-motion": "^12.4.4",
     "next": "15.0.3",
     "quickpay_solutions": "file:",
     "react": "^18.2.0",

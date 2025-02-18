@@ -78,3 +78,33 @@ img {
 		font-size: 2.5rem;
 	}
 }
+
+.container {
+	max-width: 35.25rem;
+	margin: 0 auto;
+}
+
+.loader_container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	background-color: rgb(255, 255, 255);
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+}
+
+@media screen and (min-width: 48rem) {
+	.container {
+		max-width: 46.5rem;
+	}
+}
+
+@media screen and (min-width: 62rem) {
+	.container {
+		max-width: 82.5rem;
+	}
+}

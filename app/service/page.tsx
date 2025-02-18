@@ -20,8 +20,8 @@ import Image from 'next/image'
 
 export default function Service() {
 	return (
-		<>
-			<section className={styles.service}>
+		<section className={styles.service}>
+			<section className='container'>
 				<article className={styles.service__title_text}>
 					<h5 className='main_blue-text'>Our Services</h5>
 					<h1 className='main_title'>
@@ -87,12 +87,7 @@ export default function Service() {
 						// },
 						{
 							image: (
-								<Image
-									width={416}
-									height={416}
-									src={AI}
-									alt='Ai generated'
-								/>
+								<Image width={416} height={416} src={AI} alt='Ai generated' />
 							),
 						},
 						{
@@ -127,12 +122,7 @@ export default function Service() {
 						},
 						{
 							image: (
-								<Image
-									width={416}
-									height={277}
-									src={Social}
-									alt='social'
-								/>
+								<Image width={416} height={277} src={Social} alt='social' />
 							),
 						},
 						{
@@ -176,16 +166,13 @@ export default function Service() {
 							),
 						},
 					].map((service, index) => (
-						<article
-							className={styles.service__grid_area}
-							key={index}
-						>
+						<article className={styles.service__grid_area} key={index}>
 							{service.image}
 						</article>
 					))}
 				</div>
 			</section>
-		</>
+		</section>
 	)
 }
 

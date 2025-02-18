@@ -1,10 +1,12 @@
-import React, {useEffect, useState} from 'react'
+import React, { useState } from 'react'
 import style from '../header.module.scss'
 import MenuIcon from '@mui/icons-material/Menu'
 import Link from 'next/link'
 import Menu from '../menu/menu'
 import { usePathname } from 'next/navigation'
-import Image from "next/image"
+import Image from 'next/image'
+import quickSolveImage from '@/public/QuickSolutions_logo.png'
+import AnimatedFlag from '../../../../ui/flag/canvas'
 
 const navigation = [
 	{ id: 0, name: 'Home', href: '/' },
@@ -16,29 +18,28 @@ const navigation = [
 export default function NavBar() {
 	const [menuActive, setMenuActive] = useState(false)
 	const pathname = usePathname()
-	const [animate, setAnimate] = useState(false)
-
-	useEffect(() => {
-		const interval = setInterval(() => {
-			setAnimate(true)
-			setTimeout(() => setAnimate(false), 1000)
-		}, 3000)
-
-		return () => clearInterval(interval)
-	}, [])
 
 	return (
 		<div className={style.navbar}>
 			<div className={style.navbar__space}>
-				<Link href={'/'}>
-					<Image
-						src="/QuickSolutions transperent logo 1.png"
-						alt="Quick Solutions Logo"
-						className={`${style.navbar__logo} ${animate ? style.flip : ''}`}
-						width={300}
-						height={100}
-						priority
-					/>
+				<Link href={'/'} className={style.logo_link}>
+					<div className={style.logo}>
+						<Image
+							src={quickSolveImage}
+							alt='Quick Solutions Logo'
+							width={50}
+							height={50}
+							priority
+							className={style.logo_image}
+						/>
+						<div className={style.logo_text}>
+							<p className={style.logo_text_up}>quick solutions</p>
+							<p className={style.logo_text_lower}>it services</p>
+						</div>
+					</div>
+					<div className={style.animatedFlag}>
+						<AnimatedFlag />
+					</div>
 				</Link>
 				<nav>
 					<ul className={style.navbar__navList}>

@@ -106,7 +106,7 @@
 @media screen and (min-width: 62rem) {
 	.decision {
 		max-width: 100%;
-    padding: 6rem 0;
+		padding: 6rem 0;
 	}
 
 	.list_cards {
@@ -114,8 +114,10 @@
 	}
 
 	.centered_image {
-		width: 100%;
-		max-width: 25rem;
-		min-width: 21.875rem;
+		flex: 1;
+	}
+
+	.card_description_block {
+		flex: 1;
 	}
 }
