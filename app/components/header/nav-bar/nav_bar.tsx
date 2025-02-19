@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, {useEffect, useState} from 'react'
 import style from '../header.module.scss'
 import MenuIcon from '@mui/icons-material/Menu'
 import Link from 'next/link'
@@ -18,6 +18,18 @@ const navigation = [
 export default function NavBar() {
 	const [menuActive, setMenuActive] = useState(false)
 	const pathname = usePathname()
+	const [isPaused, setIsPaused] = useState(false)
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setIsPaused(true)
+			setTimeout(() => {
+				setIsPaused(false)
+			}, 2000) // Пауза на 2 секунды
+		}, 5000) // Вращение 3 секунды + пауза 2 секунды
+
+		return () => clearInterval(interval)
+	}, [])
 
 	return (
 		<div className={style.navbar}>
@@ -30,7 +42,7 @@ export default function NavBar() {
 							width={50}
 							height={50}
 							priority
-							className={style.logo_image}
+							className={`${style.logo_image} ${isPaused ? style.paused : ''}`}
 						/>
 						<div className={style.logo_text}>
 							<p className={style.logo_text_up}>quick solutions</p>
@@ -38,7 +50,7 @@ export default function NavBar() {
 						</div>
 					</div>
 					<div className={style.animatedFlag}>
-						<AnimatedFlag />
+						{/*<AnimatedFlag />*/}
 					</div>
 				</Link>
 				<nav>
