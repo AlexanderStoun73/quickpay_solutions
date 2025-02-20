@@ -4,6 +4,8 @@ import PlaceIcon from '@mui/icons-material/Place'
 import MailOutlineIcon from '@mui/icons-material/MailOutline'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import Link from 'next/link'
+import Image from 'next/image'
+import usFlag from '@/public/us-flag.png'
 
 export default function Footer() {
 	return (
@@ -33,7 +35,14 @@ export default function Footer() {
 							</div>
 							<ul className={styles.footer__nav_list}>
 								<li>
-									<PlaceIcon style={{ color: '#06A3DA' }} />
+									<Image
+										src={usFlag}
+										alt="US Flag"
+										width={40}
+										height={22}
+										className={styles.footer__flag}
+									/>
+									<PlaceIcon style={{ color: '#06A3DA', marginLeft: '4px' }} />
 									<Link href=''>Oxford, NJ, USA</Link>
 								</li>
 								<li>
